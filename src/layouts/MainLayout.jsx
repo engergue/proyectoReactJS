@@ -3,27 +3,16 @@ import { NavBarComponent } from "../components";
 
 export const MainLayout = ({ children }) => {
   const mainLayoutStyles = {
-    backgroundColor: "white",
     color: "black",
-    height: "100vh",
-    width: "100vw",
+    height: "100%",
+    width: "100%",
     display: "flex",
     flexDirection: "column",
   };
-  const navWrapperStyles = {
-    height: "10vh",
-    width: "100vw",
-  }
-  const childrenStyles = {
-    height: "90vh",
-    width: "100vw",
-  }
+
   return (
     <div style={mainLayoutStyles}>
-      <div className={navWrapperStyles}>
-        <NavBarComponent />
-      </div>
-      <div style={childrenStyles}>{children}</div>
+      <div>{children}</div>
     </div>
   );
 };
